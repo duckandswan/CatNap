@@ -27,6 +27,17 @@ protocol EventListenerNode {
     func didMoveToScene()
 }
 
+protocol InteractiveNode {
+    func interact()
+}
+
+struct PhysicsCategory {
+    static let None: UInt32 = 0
+    static let Cat: UInt32 = 0b1 // 1
+    static let Block: UInt32 = 0b10 // 2
+    static let Bed: UInt32 = 0b100 // 4
+}
+
 class GameScene: SKScene {
     
     private var label : SKLabelNode?
